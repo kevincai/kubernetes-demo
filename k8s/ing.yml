@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: public
+  labels:
+    app: gogreeting
+  name: gogreeting-ingress
+  namespace: caixh
+spec:
+  rules:
+  - host: gogreeting.kegate-xs.cloudappl.com
+    http:
+      paths:
+      - backend:
+          serviceName: gogreeting-service
+          servicePort: 8080
+        path: /
