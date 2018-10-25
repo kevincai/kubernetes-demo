@@ -16,7 +16,7 @@ spec:
         app: gogreeting
     spec:
       containers:
-      - image: reg.qiniu.com/caixh/gogreeting:0.0.1
+      - image: reg.qiniu.com/caixh/gogreeting:0.0.2
         imagePullPolicy: IfNotPresent
         name: gogreeting
         resources:
